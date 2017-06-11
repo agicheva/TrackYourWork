@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
     <title>Register Company</title>
@@ -8,18 +8,52 @@
 
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="homein.js"></script>
 </head>
 <body>
 <ol class="breadcrumb" style="text-align: right">
         <li><a href="./home.html">Home</a></li>
         <li><a href="./login.html">Login</a></li>
-        <li class="active">Register</li>
+        <li class="active"><a href="./register.html">Register</a></li>
         <li><a href="./register-company.html">Register Company</a></li>
     </ol>
     <div class="jumbotron" style="text-align: center; height: 250px;">
         <h1>Track Your Work</h1>
         <p>Coming together is a beginning; Keeping together is progress; Working together is success; <br /> -Henry Ford</p>
     </div>
-
+    <div class="panel-group" id="collapse" role="tablist" aria-multiselectable="true">
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="collapse-heading-one">
+                <h4 class="panel-title">
+                    <a role="button" data-toggle="collapse" data-parent="#collapse" href="#collapse-one" aria-expanded="true" aria-controls="collapse-one">
+                        My Issues
+                    </a>
+                </h4>
+            </div>
+            <div id="collapse-one" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="collapse-heading-one">
+                <div class="panel-body">
+                    <ul class="list-group">
+                        <li class="list-group-item open_item"><strong>NO-123</strong> Change color of login screen</li>
+                        <li class="list-group-item open_item"><strong>NO-124</strong> Implement logout functionality</li>
+                        <li class="list-group-item open_item "><strong>NO-125</strong> Do research for daily reports</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="collapse-heading-two">
+                <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#collapse" href="#collapse-two" aria-expanded="false" aria-controls="collapse-two">
+                        Teams
+                    </a>
+                </h4>
+            </div>
+            <div id="collapse-two" class="panel-collapse collapse" role="tabpanel" aria-labelledby="collapse-heading-two">
+                <div class="panel-body">
+                    Morbi eget libero quis metus consectetur semper.
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
