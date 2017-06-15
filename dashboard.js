@@ -48,6 +48,5 @@
             event.preventDefault();
         });
     }
-
 });
 

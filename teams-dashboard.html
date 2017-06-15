@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Teams Dashboard</title>
+    <meta charset="utf-8" />
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/flatly/bootstrap.min.css" type="text/css" rel="stylesheet" />
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script src="dashboard.js"></script>
+    <script src="teams-dashboard.js"></script>
+</head>
+<body>
+    <div class="jumbotron" style="text-align: center; height: 250px;">
+        <h1>Track Your Work</h1>
+        <p>Coming together is a beginning; Keeping together is progress; Working together is success; <br /> -Henry Ford</p>
+    </div>
+    <div class="container-fluid col-lg-11">
+        <div id="sortableKanbanBoards" class="row">
+            <div class="panel panel-primary kanban-col col-lg-2" style="margin-right: 30px; margin-left: 30px;">
+                <div class="panel-heading">
+                    Teams
+                    <i class="fa fa-2x fa-plus-circle pull-right"></i>
+                </div>
+                <div class="panel-body">
+                    <div id="DONE" class="kanban-centered">
+                        <article class="kanban-entry grab" id="item5" draggable="false">
+                            <div class="kanban-entry-inner">
+                                <div class="kanban-label" onclick="showWildcard()">
+                                    <span class="badge">1</span>
+                                    <strong>Wildcards</strong>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="kanban-entry grab" id="item5" draggable="false">
+                            <div class="kanban-entry-inner">
+                                <div class="kanban-label" onclick="showBitsPlease()">
+                                    <span class="badge">2</span>
+                                    <strong>Bits please</strong>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="kanban-entry grab" id="item5" draggable="false">
+                            <div class="kanban-entry-inner">
+                                <div class="kanban-label" onclick="showSqlInjectors()">
+                                    <span class="badge">3</span>
+                                    <strong>SQL injectors</strong>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="kanban-entry grab" id="item5" draggable="false">
+                            <div class="kanban-entry-inner">
+                                <div class="kanban-label" onclick="showTheBlogrammers()">
+                                    <span class="badge">4</span>
+                                    <strong>The blogrammers</strong>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+            <!--sütun başlangıç-->
+            <div class="panel panel-primary kanban-col col-lg-3">
+                <div class="panel-heading">
+                    TODO
+                    <i class="fa fa-2x fa-plus-circle pull-right"></i>
+                </div>
+                <div class="panel-body">
+                    <div id="TODO" class="kanban-centered">
+                        <article class="kanban-entry grab" id="item1" draggable="true">
+                            <div class="kanban-entry-inner">
+                                <div class="kanban-label">
+                                    <div class="wildcards" style="display: inline">
+                                        <span class="badge">PO</span>
+                                        <strong>NO-123</strong> Change color of login screen
+                                    </div>
+                                    <div class="bitsplease" style="display: none">
+                                        <span class="badge">PO</span>
+                                        <strong>NO-223</strong> Fix show/hide button
+                                    </div>
+                                    <div class="sqlinjectors" style="display: none">
+                                        <span class="badge">PO</span>
+                                        <strong>NO-390</strong> Do research for monthly reports
+                                    </div>
+                                    <div class="theblogrammers" style="display: none">
+                                        <span class="badge">PO</span>
+                                        <strong>NO-540</strong> Fix show/hide button on reports screen
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="kanban-entry grab" id="item2" draggable="true">
+                            <div class="kanban-entry-inner">
+                                <div class="kanban-label">
+                                    <div class="wildcards" style="display: inline">
+                                        <span class="badge">PO</span>
+                                        <strong>NO-124</strong> Change color of logout screen
+                                    </div>
+                                    <div class="bitsplease" style="display: none">
+                                        <span class="badge">PO</span>
+                                        <strong>NO-224</strong> Load the right information for monthly repors
+                                    </div>
+                                    <div class="sqlinjectors" style="display: none">
+                                        <span class="badge">PO</span>
+                                        <strong>NO-391</strong> Remove not used table
+                                    </div>
+                                    <div class="theblogrammers" style="display: none">
+                                        <span class="badge">PO</span>
+                                        <strong>NO-541</strong> Do monitoring on login page
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="kanban-entry grab" id="item3" draggable="true">
+                            <div class="kanban-entry-inner">
+                                <div class="kanban-label">
+                                    <div class="wildcards" style="display: inline">
+                                        <span class="badge">PO</span>
+                                        <strong>NO-125</strong> Do research for daily reports
+                                    </div>
+                                    <div class="theblogrammers" style="display: none">
+                                        <span class="badge">PO</span>
+                                        <strong>NO-541</strong> Do monitoring on reports page
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+            <!--sütun bitiş-->
+            <!--sütun başlangıç-->
+            <div class="panel panel-primary kanban-col col-lg-3">
+                <div class="panel-heading">
+                    DOING
+                    <i class="fa fa-2x fa-plus-circle pull-right"></i>
+                </div>
+                <div class="panel-body">
+                    <div id="DOING" class="kanban-centered">
+                        <article class="kanban-entry grab" id="item5" draggable="true">
+                            <div class="kanban-entry-inner">
+                                <div class="kanban-label">
+                                    <div class="wildcards" style="display: inline">
+                                        <span class="badge">A</span>
+                                        <strong>NO-119</strong> Fix button on reports screen
+                                    </div>
+                                    <div class="bitsplease" style="display: none">
+                                        <span class="badge">S</span>
+                                        <strong>NO-225</strong> Fix the display style of submit button
+                                    </div>
+                                    <div class="sqlinjectors" style="display: none">
+                                        <span class="badge">V</span>
+                                        <strong>NO-397</strong> Fix order of reports by date and type
+                                    </div>
+                                    <div class="theblogrammers" style="display: none">
+                                        <span class="badge">Z</span>
+                                        <strong>NO-544</strong> Implement show/hide button on reports screen
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="kanban-entry grab" id="item6" draggable="true">
+                            <div class="kanban-entry-inner">
+                                <div class="kanban-label">
+                                     <div class="wildcards" style="display: inline">
+                                        <span class="badge">M</span>
+                                        <strong>NO-120</strong> Fix typo
+                                    </div>
+                                    <div class="bitsplease" style="display: none">
+                                        <span class="badge">D</span>
+                                        <strong>NO-226</strong> Fix button on reports screen
+                                    </div>
+                                    <div class="sqlinjectors" style="display: none">
+                                        <span class="badge">B</span>
+                                        <strong>NO-398</strong> Fix date and type
+                                    </div>
+                                    <div class="theblogrammers" style="display: none">
+                                        <span class="badge">C</span>
+                                        <strong>NO-545</strong> Implement screen for monitoring
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+            <!--sütun bitiş-->
+            <!--sütun başlangıç-->
+            <div class="panel panel-primary kanban-col col-lg-3">
+                <div class="panel-heading">
+                    DONE
+                    <i class="fa fa-2x fa-plus-circle pull-right"></i>
+                </div>
+                <div class="panel-body">
+                    <div id="DONE" class="kanban-centered">
+                        <article class="kanban-entry grab" id="item5" draggable="true">
+                            <div class="kanban-entry-inner">
+                                <div class="kanban-label">
+                                    <div class="wildcards" style="display: inline">
+                                        <span class="badge">A</span>
+                                        <strong>NO-121</strong> Add dar and drop functionality on new screen
+                                    </div>
+                                    <div class="bitsplease" style="display: none">
+                                        <span class="badge">D</span>
+                                        <strong>NO-229</strong> Fix typo
+                                    </div>
+                                    <div class="sqlinjectors" style="display: none">
+                                        <span class="badge">B</span>
+                                        <strong>NO-394</strong> Log important info
+                                    </div>
+                                    <div class="theblogrammers" style="display: none">
+                                        <span class="badge">Z</span>
+                                        <strong>NO-549</strong> Set right font
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="kanban-entry grab" id="item5" draggable="true">
+                            <div class="kanban-entry-inner">
+                                <div class="kanban-label">
+                                    <div class="sqlinjectors" style="display: none">
+                                        <span class="badge">V</span>
+                                        <strong>NO-409</strong> Remove not used capability
+                                    </div>
+                                    <div class="theblogrammers" style="display: none">
+                                        <span class="badge">C</span>
+                                        <strong>NO-555</strong> Set color for span
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Static Modal -->
+    <div class="modal modal-static fade" id="processing-modal" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="text-center">
+                        <i class="fa fa-refresh fa-5x fa-spin"></i>
+                        <h4>Processing...</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
