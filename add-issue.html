@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add issue</title>
+    <meta charset="utf-8" />
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/flatly/bootstrap.min.css" type="text/css" rel="stylesheet" />
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="jumbotron" style="text-align: center; height: 250px;">
+        <h1>Track Your Work</h1>
+        <p>Coming together is a beginning; Keeping together is progress; Working together is success; <br /> -Henry Ford</p>
+    </div>
+     </div>
+    <form class="form-horizontal">
+      <fieldset>
+        <div class="col-lg-6">
+            <div class="form-group">
+              <label for="inputName" class="col-lg-2 control-label">Name:</label>
+              <div class="col-lg-8">
+                <input type="text" class="form-control" id="inputName" placeholder="Name">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputTeam" class="col-lg-2 control-label">Team:</label>
+              <div class="col-lg-8">
+                <input type="text" class="form-control" id="inputTeam" placeholder="Team">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputState" class="col-lg-2 control-label">State:</label>
+              <div class="col-lg-8">
+                    <div class="btn-group">
+                      <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                        ToDo
+                        <span class="caret"></span>
+                      </a>
+                      <ul class="dropdown-menu">
+                        <li><a href="#">ToDo</a></li>
+                        <li><a href="#">Doing</a></li>
+                        <li><a href="#">Done</a></li>
+                       </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+              <label for="inputType" class="col-lg-2 control-label">Issue type:</label>
+              <div class="col-lg-8">
+                    <div class="btn-group">
+                      <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                        Feature
+                        <span class="caret"></span>
+                      </a>
+                      <ul class="dropdown-menu">
+                        <li><a href="#">Feature</a></li>
+                        <li><a href="#">Bug</a></li>
+                       </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+              <label for="inputPriority" class="col-lg-2 control-label">Priority:</label>
+              <div class="col-lg-8">
+                    <div class="btn-group">
+                      <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                        Minor
+                        <span class="caret"></span>
+                      </a>
+                      <ul class="dropdown-menu">
+                        <li><a href="#">Minor</a></li>
+                        <li><a href="#">Major</a></li>
+                        <li><a href="#">Critical</a></li>
+                        <li><a href="#">Blocker</a></li>
+                       </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+              <label for="inputSeverity" class="col-lg-2 control-label">Severity:</label>
+              <div class="col-lg-8">
+                    <div class="btn-group">
+                      <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                        Low
+                        <span class="caret"></span>
+                      </a>
+                      <ul class="dropdown-menu">
+                        <li><a href="#">Low</a></li>
+                        <li><a href="#">Medium</a></li>
+                        <li><a href="#">High</a></li>
+                        <li><a href="#">Very High</a></li>
+                        <li><a href="#">Urgent</a></li>
+                       </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="form-group">
+              <label for="inputStep" class="col-lg-2 control-label">Step to reproduce:</label>
+              <div class="col-lg-8">
+                <textarea class="form-control" rows="3" id="textArea"></textarea>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputActual" class="col-lg-2 control-label">Actual result:</label>
+              <div class="col-lg-8">
+                <textarea class="form-control" rows="3" id="textArea"></textarea>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputExpected" class="col-lg-2 control-label">Expected:</label>
+              <div class="col-lg-8">
+                <textarea class="form-control" rows="3" id="textArea"></textarea>
+              </div>
+            </div>
+            <div class="form-group" style="text-align: right">
+                <div class="col-lg-8">
+                    <a href="./dashboard.html" class="btn btn-primary">Submit</a>
+                </div>
+                <div class="col-lg-2">
+                    <a href="./homein.html" class="btn btn-danger">Cancel</a>
+                </div>
+            </div>
+        </div>
+      </fieldset>
+    </form>
+</body>
+</html>
