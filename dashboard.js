@@ -48,5 +48,10 @@
             event.preventDefault();
         });
     }
-});
 
+    $('.trigger').click(function(){
+        $('#myModal').modal('show');
+        return false;
+    })
+
+});
