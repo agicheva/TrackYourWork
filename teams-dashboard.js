@@ -1,3 +1,19 @@
+function start() {
+    var team = (location.hash).replace('#','');
+    if (team == 'wildcards') {
+        showWildcard();
+    }
+    if (team == 'bitsplease') {
+        showBitsPlease();
+    }
+    if (team == 'sqlinjectors') {
+        showSqlInjectors();
+    }
+    if (team == 'theblogrammers') {
+        showTheBlogrammers();
+    }
+}
+
 function showWildcard() {
     var elements = document.getElementsByClassName("wildcards")
 
@@ -104,3 +120,5 @@ function showTheBlogrammers() {
         elements[i].style.display = "inline";
     }
 }
+
+window.onload = start;
